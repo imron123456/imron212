@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['username'])){
+    echo "SELAMAT DATANG" . $_SESSION['username'];
+    echo "<a href='logout.php'> logout </a>";  
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -8,7 +15,8 @@
 
 <body>
 
-    <a href="tambah.php">+ TAMBAH IDENTITAS</a>
+    <a href="tambah.php"> TAMBAH IDENTITAS</a>
+    <a href="login.php"> LOGIN</a>
     <br />
     <br />
     <table border="1" id="customer">
