@@ -1,0 +1,36 @@
+fun main() {
+    //sks
+    val kelas = 4
+    val sks = kelas * 4
+    val skswajib = 6
+
+    //mahasiswa
+    val mahasiswa = 10
+
+    //ngajar
+    val totngajar = (sks - skswajib)
+    val tiappertemuan = totngajar.toFloat() / kelas
+    val pertemuandosen = 3
+
+    //gaji
+    val lbhngajar = (totngajar * 28000)
+    val jmlmasuk = ((tiappertemuan * pertemuandosen) * 16000)
+    val dpa = (mahasiswa * 5000)
+    val gajikotor = (lbhngajar + jmlmasuk + dpa)
+    val infaq = gajikotor * 0.05f
+    val gajibersih = (lbhngajar + jmlmasuk + dpa) - infaq
+
+    println ("======GAJI SEBULAN======")
+    println("Total gaji lebih ngajar  = Rp."+ lbhngajar)
+
+    println("-----------------------------------")
+
+    println("Total gaji masuk pertemuan = Rp."+ jmlmasuk)
+    println("Total DPA = Rp. "+ dpa)
+
+    println("-----------------------------------")
+
+    println("TOTAL GAJI KOTOR = Rp."+ gajikotor)
+    println("INFAQ = Rp. "+infaq)
+    println("TOTAL GAJI BERSIH = Rp."+ gajibersih)
+}
